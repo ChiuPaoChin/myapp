@@ -1,0 +1,100 @@
+/* =============================
+   標題樣式
+============================= */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* =============================
+   容器樣式
+============================= */
+.converter-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* =============================
+   每列輸入欄位樣式
+============================= */
+.converter-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .converter-row label {
+        font-size: 1.2rem;
+        width: 80px; /* 固定寬度 */
+        text-align: right; /* 文字靠右對齊 */
+        margin-right: 10px;
+    }
+
+    .converter-row input {
+        width: calc(100% - 90px);
+        font-size: 1.2rem;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        text-align: right; /* 輸入數字靠右 */
+    }
+
+/* =============================
+   去掉 number input 的 spinner
+============================= */
+input.no-spinner::-webkit-outer-spin-button,
+input.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.no-spinner[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* =============================
+   清空按鈕樣式
+============================= */
+.clear-btn {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6666;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+    .clear-btn:hover {
+        background-color: #ff4d4d;
+    }
+
+/* =============================
+   手機響應式
+============================= */
+@media (max-width:480px) {
+    .converter-container {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .converter-row label, .converter-row input {
+        font-size: 1.1rem;
+    }
+}
